@@ -1,23 +1,18 @@
 package com.danielgluhak;
 
+import java.security.Key;
+
 public class Main {
 
     public static void main(String[] args) {
 
-       Fridge candy = new Fridge(new Dimension(185,60,60), "Candy", "2", "Silver", 2015);
-       Microwave gorenje = new Microwave(new Dimension(40,65,45), "analog", "Silver", 2020, 1000);
-       Owen bosch = new Owen(new Dimension(80,80,65), "Bosch", "Digital/analog", "Silver/black", 2020);
+    Casing casing = new Casing("DB22", "Dell", "220", new Dimension(250,80,45));
+    Motherboard motherboard = new Motherboard("XFX 323", "XFX", 8, 4, "v292.3");
+    Monitor monitor = new Monitor("HP", "HO", 24, new Resolution(1920,1080));
+    Keyboard keyboard = new Keyboard("qwertz");
 
-       Kitchen kitchen = new Kitchen(candy, gorenje, bosch);
+    PC pc = new PC(casing, motherboard, monitor, keyboard);
 
-       kitchen.allDevices();
-
-       bosch.lightOn();
-
-       gorenje.adjustIntensity(1002);
-
-
-
-
+    keyboard.escapeButton();
     }
 }
